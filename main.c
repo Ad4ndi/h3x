@@ -6,8 +6,8 @@
 
 void help() {
     printf("Usage:\n"
-		   "   h3x [options] [infile [outfile]]\n"
-		   "Options:\n"
+   	   "   h3x [options] [infile [outfile]]\n"
+	   "Options:\n"
            "   -h          print help message\n"
            "   -c cols     format <cols> octets per line (default 16)\n"
            "   -u          use upcase hex letters\n"
