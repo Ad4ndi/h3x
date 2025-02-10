@@ -32,20 +32,15 @@ void hex(FILE *f, int cols, int uppercase, int groups, int postscript, size_t le
         
         for (size_t i = 0; i < cols; i++) {
             if (i % groups == 0 && i > 0) printf(" ");
-            if (i < read_bytes)
-                printf(uppercase ? "%02X " : "%02x ", buffer[i]);
-            else
-                printf("   ");
+            if (i < read_bytes) printf(uppercase ? "%02X " : "%02x ", buffer[i]);
+            else printf("   ");
         }
         
         if (!postscript) {
             printf(" |");
-            for (size_t i = 0; i < read_bytes; i++)
-                printf("%c", isprint(buffer[i]) ? buffer[i] : '.');
+            for (size_t i = 0; i < read_bytes; i++) printf("%c", isprint(buffer[i]) ? buffer[i] : '.');
             printf("|\n");
-        } else {
-            printf("\n");
-        }
+        } else printf("\n");
         
         offset += cols;
         len -= read_bytes;
@@ -90,11 +85,8 @@ int main(int argc, char *argv[]) {
         if (!out) { perror("Error opening output file"); fclose(f); return 1; }
     }
     
-    if (rev) {
-        reverse(f, out, len);
-    } else {
-        hex(f, cols, upcase, groups, postscript, len);
-    }
+    if (rev) reverse(f, out, len);
+    else hex(f, cols, upcase, groups, postscript, len);
     
     fclose(f);
     if (out != stdout) fclose(out);
