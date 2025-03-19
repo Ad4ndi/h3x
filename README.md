@@ -1,4 +1,4 @@
-# h3x - minimal hexdump CLI utility
+# h3x v1.3 - minimal hexdump CLI utility
 
 ### Usage:
 ```
