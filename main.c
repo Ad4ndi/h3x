@@ -56,7 +56,8 @@ void print_hex
     }
 }
 
-void reverse(FILE *f, FILE *out, size_t len) {
+void reverse
+(FILE *f, FILE *out, size_t len) {
     unsigned char byte;
     while (len > 0 && fscanf(f, "%2hhx", &byte) == 1) {
         fwrite(&byte, 1, 1, out);
@@ -64,7 +65,8 @@ void reverse(FILE *f, FILE *out, size_t len) {
     }
 }
 
-int main(int argc, char *argv[]) {
+int main
+(int argc, char *argv[]) {
     int opt, cols = DEF_COLS, upcase = 0, rev = 0, groups = DEF_GROUPS, postscript = 0;
     size_t len = SIZE_MAX;
 
