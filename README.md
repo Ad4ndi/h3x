@@ -1,4 +1,4 @@
-# h3x v1.3 - minimal hexdump CLI utility
+# h3x v1.4 - minimal hexdump CLI utility
 
 ### Usage:
 ```
@@ -19,8 +19,7 @@ h3x [options] [infile [outfile]]
 
 ### Install
 ```
-$ git clone https://github.com/Ad4ndi/h3x/
-$ cd h3x
-$ clang main.c -o h3x
-$ sudo cp h3x /usr/bin
+git clone https://github.com/Ad4ndi/h3x/
+cd h3x
+ldc2 h3x.d
 ```
